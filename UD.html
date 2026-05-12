@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Under Development</title>
+    <link rel="icon" type="image/x-icon" href="Images/logo.png">
+
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body{
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(135deg, #0f172a, #1e40af);
+            overflow: hidden;
+            color: white;
+            position: relative;
+        }
+
+        .container{
+            text-align: center;
+            z-index: 2;
+            padding: 20px;
+        }
+
+        .icon{
+            font-size: 120px;
+            margin-bottom: 20px;
+            animation: bounce 2s infinite;
+        }
+
+        .title{
+            font-size: 50px;
+            font-weight: bold;
+            margin-bottom: 15px;
+            color: #60a5fa;
+            text-shadow: 0 0 20px rgba(96, 165, 250, 0.5);
+        }
+
+        .subtitle{
+            font-size: 22px;
+            margin-bottom: 15px;
+        }
+
+        .description{
+            max-width: 650px;
+            margin: auto;
+            line-height: 1.7;
+            color: #d1d5db;
+            font-size: 17px;
+        }
+
+        .btn{
+            display: inline-block;
+            margin-top: 35px;
+            padding: 14px 35px;
+            border-radius: 50px;
+            text-decoration: none;
+            background: #3b82f6;
+            color: white;
+            font-weight: 600;
+            transition: 0.3s ease;
+            box-shadow: 0 5px 20px rgba(59, 130, 246, 0.4);
+        }
+
+        .btn:hover{
+            background: #2563eb;
+            transform: translateY(-3px);
+        }
+
+        .gear{
+            position: absolute;
+            border-radius: 50%;
+            border: 15px solid rgba(255,255,255,0.05);
+            animation: rotate 12s linear infinite;
+        }
+
+        .gear::before{
+            content: '';
+            position: absolute;
+            inset: 20px;
+            border-radius: 50%;
+            border: 10px solid rgba(255,255,255,0.08);
+        }
+
+        .gear1{
+            width: 250px;
+            height: 250px;
+            top: -80px;
+            left: -80px;
+        }
+
+        .gear2{
+            width: 180px;
+            height: 180px;
+            bottom: -50px;
+            right: -50px;
+            animation-direction: reverse;
+        }
+
+        @keyframes rotate{
+            from{
+                transform: rotate(0deg);
+            }
+            to{
+                transform: rotate(360deg);
+            }
+        }
+
+        @keyframes bounce{
+            0%,100%{
+                transform: translateY(0);
+            }
+            50%{
+                transform: translateY(-10px);
+            }
+        }
+
+        @media(max-width:768px){
+
+            .icon{
+                font-size: 90px;
+            }
+
+            .title{
+                font-size: 36px;
+            }
+
+            .subtitle{
+                font-size: 18px;
+            }
+
+            .description{
+                font-size: 15px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="gear gear1"></div>
+    <div class="gear gear2"></div>
+
+    <div class="container">
+
+        <div class="icon">🚧</div>
+
+        <h1 class="title">Under Development</h1>
+
+        <h2 class="subtitle">
+            We’re Working On Something Amazing
+        </h2>
+
+        <p class="description">
+            This page is currently under development. 
+            I am building new features and improving the experience 
+            to make everything better for you..
+        </p>
+
+        <a href="index.html" class="btn">
+            Back to Home
+        </a>
+
+    </div>
+
+</body>
+</html>
