@@ -323,7 +323,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const resumePages = [
         "Images/page-1.jpg",
         "Images/page-2.jpg",
-        // add more if needed
+        // add more if needed new update here
     ];
 
     let currentPage = 0;
