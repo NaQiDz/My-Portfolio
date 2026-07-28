@@ -2722,7 +2722,7 @@ body {
     position:absolute;
     left:50%;
     transform:translateX(-50%);
-    width:10px;
+    width:6px;
     height:100%;
     background:#d9deeb;
     border-radius:20px;
@@ -2742,9 +2742,9 @@ body {
 
 .scroll-dot{
 
-    width:24px;
+    width:18px;
 
-    height:24px;
+    height:18px;
 
     border-radius:50%;
 
