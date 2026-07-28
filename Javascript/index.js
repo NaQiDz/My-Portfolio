@@ -35,7 +35,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
         /* total scroll progress through timeline */
         const totalDistance = timelineRect.height + (endPoint - startPoint);
-        const progressed = endPoint - timelineRect.top;
+        const progressed = startPoint - timelineRect.top;
 
         let progressRatio = progressed / totalDistance;
         progressRatio = Math.max(0, Math.min(1, progressRatio));
@@ -71,6 +71,53 @@ document.addEventListener("DOMContentLoaded", () => {
             }
         });
     }
+
+    const sections = document.querySelectorAll("section");
+    const dots = document.querySelectorAll(".scroll-dot");
+    const fill = document.querySelector(".scroll-fill");
+
+    function updateScrollNav(){
+
+        const scrollY = window.scrollY;
+        const pageHeight =
+            document.documentElement.scrollHeight - window.innerHeight;
+
+        // Blue line progress
+        fill.style.height = (scrollY / pageHeight) * 100 + "%";
+
+        let activeIndex = 0;
+
+        sections.forEach((section,index)=>{
+
+            // Trigger when section reaches middle of screen
+            const trigger = section.offsetTop - window.innerHeight * 0.5;
+
+            if(scrollY >= trigger){
+                activeIndex = index;
+            }
+
+        });
+
+        dots.forEach((dot,index)=>{
+
+            dot.classList.remove("active","completed");
+
+            if(index < activeIndex){
+                // Passed sections
+                dot.classList.add("completed");
+            }
+            else if(index === activeIndex){
+                // Current section
+                dot.classList.add("active");
+            }
+
+        });
+
+    }
+
+    window.addEventListener("scroll",updateScrollNav);
+    window.addEventListener("load",updateScrollNav);
+    
 
     function revealSkillsOnScroll() {
         const triggerPoint = window.innerHeight * 0.85;
