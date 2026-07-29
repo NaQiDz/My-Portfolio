@@ -2912,6 +2912,7 @@ body {
     .project-grid,
     .certificate-grid {
         grid-template-columns: 1fr 1fr;
+        max-width: 100%;
     }
 
     .showcase-title {
@@ -2936,13 +2937,48 @@ body {
 
     .tab-btn {
         font-size: 18px;
-        padding: 20px 16px;
+        padding: 50px 16px;
     }
 
     .project-image img,
     .certificate-card img {
-        height: 300px;
+        height: 200px;
     }
+}
+
+@media (max-width:480px){
+
+    .showcase-section{
+        padding:80px 8px;
+    }
+
+    .project-grid,
+    .certificate-grid{
+        grid-template-columns:1fr;
+        gap:18px;
+    }
+
+    .project-card,
+    .certificate-card{
+        width:100%;
+        max-width:none;
+        margin:0;
+    }
+
+    .project-card{
+        height:420px;
+    }
+
+    .project-bg,
+    .certificate-card img{
+        height:420px;
+    }
+
+    .project-content{
+        left:20px;
+        right:20px;
+    }
+
 }
 
 /* responsive */
