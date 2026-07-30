@@ -873,15 +873,17 @@ body {
 }
 
 .timeline-item.left {
-    left: -11%;
-    right: 25%;
+    width: 50%;
+    left: 0;
     padding-right: 120px;
+    box-sizing: border-box;
 }
 
 .timeline-item.right {
+    width: 50%;
     left: 50%;
-    right: 0;
-    padding-left: 140px;
+    padding-left: 120px;
+    box-sizing: border-box;
 }
 
 .timeline-dot {
@@ -955,11 +957,6 @@ body {
     z-index: 1;
 }
 
-@media (max-width: 1640px) {
-    .timeline-card {
-        display: none;
-    }
-}
 
 .timeline-item.reached .timeline-card {
     opacity: 1;
@@ -2937,7 +2934,7 @@ body {
 
     .tab-btn {
         font-size: 18px;
-        padding: 50px 16px;
+        padding: 24px 20px;
     }
 
     .project-image img,
@@ -2986,25 +2983,141 @@ body {
     .design-gallery {
         column-count: 2;
     }
-
-    .gallery-title {
+    .journey-section {
+        background: #020617;
+        padding: 0px 5% 40px;
+        position: relative;
+        overflow: hidden;
+        z-index: 1;
+    }
+    .journey-title, .gallery-title {
         font-size: 42px;
+    }
+
+    .timeline-dot {
+        width: 160px;
+        height: 160px;
+    }
+
+    .timeline-card h3 {
+        font-size: 16px;
+        font-weight: 500;
+    }
+
+    .timeline-card span {
+        font-size: 12px;
+    }
+
+    .timeline-card p {
+        font-size: 10px;
+    }
+}
+
+@media (max-width: 890px) {
+    .timeline-item.left {
+        padding-right: 110px;
+    }
+    .timeline-item.right {
+        padding-left: 110px;
+    }
+    .timeline-card h3 {
+        font-size: 14px;
+        font-weight: 400;
+    }
+
+    .timeline-card span {
+        font-size: 10px;
+    }
+
+    .timeline-card p {
+        font-size: 8px;
+    }
+}
+
+@media (max-width: 822px) {
+    .timeline-item.left {
+        padding-right: 100px;
+    }
+    .timeline-item.right {
+        padding-left: 100px;
+    }
+}
+
+@media (max-width: 768px) {
+    .timeline-card{
+        display: none;
+    }
+    .timeline-item {
+        margin-bottom: 10px;
+    }
+    .cta-title{
+        font-size: 18px;
     }
 }
 
 @media (max-width: 700px) {
+    .timeline-item.left {
+        padding-right: 80px;
+    }
+    .timeline-item.right {
+        padding-left: 80px;
+    }
     .design-gallery {
         column-count: 1;
     }
-
-    .gallery-title {
+    .journey-title, .gallery-title {
         font-size: 32px;
     }
-
+    .timeline-dot {
+        width: 130px;
+        height: 130px;
+    }
     .design-overlay h3 {
         font-size: 18px;
     }
 }
+
+@media (max-width: 457px) {
+    .cta-title{
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 414px) {
+    .project-card, .certificate-card{
+        height: 280px;
+    }
+    .certificate-info h3{
+        font-size: 16px;
+    }
+    .cert-badge, .cert-date{
+            padding: 10px 14px;
+            font-size: 9px;
+    }
+    .cert-right{
+        padding:20px;
+    }
+    .cert-right h2{
+        font-size: 16px;
+    }
+    .cert-modal-h2{
+        font-size: 12px;
+    }
+    .cert-modal-btn{
+        padding: 10px;
+        font-size: 12px;
+    }
+    .cert-modal-date{
+        font-size: 12px;
+    }
+    .project-content p {
+        display: none;
+    }
+    .project-modal-content h2{
+        font-size: 18px;
+    }
+}
+
 
 @keyframes moveStars {
     from {
